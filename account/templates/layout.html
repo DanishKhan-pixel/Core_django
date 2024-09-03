@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}
         Website
-    
       {% endblock %}</title>
     <link rel="stylesheet" href="{% static "style.css" %}">
     <style>
@@ -51,7 +50,13 @@
         
         {%endfor%}
       </table>
-      <p>{{cars}}</p>
+      <p>
+        {% if 'car22' in cars%}
+        yes avalible
+
+        {%endif %}
+
+      </p>
     {% comment %} {{people}} {% endcomment %}
     
 </body>
