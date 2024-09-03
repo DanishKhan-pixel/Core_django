@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}
+    
+      {% endblock %}</title>
+    <link rel="stylesheet" href="{% static "style.css" %}">
+    <style>
+        table, th, td {
+            border: 1px solid black;
+          }
+    
+    </style>
+</head>
+{% block content %}
+<body>
+    <h1>alpha is here </h1>
+    <hr>
+    <table>
+        <tr>
+          <th>S .No</th>
+          <th>name</th>
+          <th>age </th>
+        </tr>
+        {% for people in people%}
+        <tr>
+          <td>{{forloop.counter}}</td>
+          <td>{{people.name}}</td>
+          <td>{{people.age}}</td>
+        </tr>
+        {%endfor%}
+      </table>
+    {{people}}
+</body>
+{% endblock %}
+</html>

@@ -4,7 +4,18 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return render(request, 'home/index.html')
+    # dynamic data pass at html page
+    people=[
+        {'name':'ali khan', 'age': 23},
+        {'name':'ali ', 'age': 22},
+        {'name':'ali bab ', 'age': 22},
+        {'name':'ali  khan bab', 'age': 22},
+        {'name':'ali ahamad', 'age': 22},
+        {'name':'ali muhammad', 'age': 22},
+    ]
+    # for people in people: # for checking data pass or not 
+    #     print(people)
+    return render(request, 'home/index.html', context={'people':people})
 
 
 

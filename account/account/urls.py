@@ -19,7 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('home.urls')),  # Routes root URL to the 'home' app
-    # The commented path to views.home is not needed, since it's handled in the app's urls.py
+    path('', include('home.urls')),
 ]
 
