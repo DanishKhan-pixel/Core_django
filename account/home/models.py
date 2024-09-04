@@ -14,3 +14,5 @@ class Teacher(models.Model):
 class Car(models.Model):
     name=models.CharField(max_length=23)
     speed=models.IntegerField(default=30)
+    def __str__(self):
+        return f"{self.name} {self.speed}"
