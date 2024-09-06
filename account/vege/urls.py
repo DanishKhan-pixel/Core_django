@@ -3,4 +3,5 @@ from .import views
 
 urlpatterns = [
     path("receips/", views.receipes, name="receipes"), 
+    
 ]
