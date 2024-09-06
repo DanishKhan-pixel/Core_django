@@ -12,18 +12,21 @@
 <body>
 
     <div class="container mt-5">
-        <form class="col-6 mx-auto card p-3 shadow-lg">
+        <form class="col-6 mx-auto card p-3 shadow-lg" method='post' enctype='mutlipart/form-data'>
+            {% csrf_token %}
+            <h2>Add Receipe</h2>
+            <hr>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Receips name</label>
-              <input type="text" class="form-control" >
+              <input  name= "name" required type="text" class="form-control" >
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">description</label>
-              <textarea  class ="form-control"></textarea>
+              <textarea name= "description"  class ="form-control" required></textarea>
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">image</label>
-                <input type="file" class="form-control" >
+                <input  name= "image" type="file" class="form-control" >
             </div>
            
             <button type="submit" class="btn btn-primary">Submit</button>

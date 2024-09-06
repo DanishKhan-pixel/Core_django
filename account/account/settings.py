@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'vege',
-    '    '
+    
 ]
 
 
@@ -54,6 +54,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'account.urls'
+
 
 TEMPLATES = [
     {
