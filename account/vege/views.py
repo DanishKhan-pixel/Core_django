@@ -21,7 +21,7 @@ def receipes(request):
      
 
     )
-    return redirect('/receips/')
+   return redirect('/receips/')
     
 
 
