@@ -9,10 +9,12 @@ class Teacher(models.Model):
     
     def __str__(self):
         return f"{self.first_name} {self.last_name} - {self.subject}"
-    
 
 class Car(models.Model):
     name=models.CharField(max_length=23)
     speed=models.IntegerField(default=30)
     def __str__(self):
         return f"{self.name} {self.speed}"
+
+
+
