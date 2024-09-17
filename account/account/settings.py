@@ -41,9 +41,6 @@ INSTALLED_APPS = [
     'vege',
     
 ]
-
-
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
